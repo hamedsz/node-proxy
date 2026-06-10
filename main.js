@@ -4,7 +4,7 @@ const httpProxy = require('http-proxy');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
-const TARGET_DOMAIN = 'http://tns.havinsepehr.com:8080';
+const TARGET_DOMAIN = process.env.TARGET_DOMAIN || 'http://aaa.me.zabanoosh.com:8080';
 
 const app = express();
 const proxy = httpProxy.createProxyServer({
